@@ -1,0 +1,50 @@
+
+
+a:visited {
+    color:    purple
+}
+
+a:hover {
+    color:    rgb(0,0,128);
+   }
+   h4 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #1B54A3;
+}
+h5 {
+    font-family: Arial, Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+h2 {
+    margin-top: 1.5em;
+    color : #ffffff; 
+    background-color: #085218;
+}
+.navh1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	margin-bottom: 2px;
+	font-weight: bold;
+	padding-bottom: 5px;
+	padding-top: 3px;
+}
+div#sidebar {
+    position: fixed;
+    width: 10em;
+    float: left;
+    text-align: right;
+   }
+div#body_outer {
+    margin-left: 12em;
+    max-width: 45em;
+    border-left: 4px solid blue;
+    //border-right: 1px solid black;
+}
+
+div#body {
+    margin: 1em;
+}
+

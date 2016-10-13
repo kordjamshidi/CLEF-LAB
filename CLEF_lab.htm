@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta name="GENERATOR" content="Mozilla/4.5 [en] (Win95; I) [Netscape]">
+     <link rel="shortcut icon" href="http://tulane.edu/sites/tulane/files/favicon_0.ico" type="image/vnd.microsoft.icon" /> 
+    <title>CLEF Lab on Multimodal Spatial Role Labeling</title>
+    <X-SAS-WINDOW TOP=78 BOTTOM=636 LEFT=30 RIGHT=560/>
+    <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="parisa.css" type="text/css" />
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+    </script>
+  </head>
+
+  <body bgcolor="#FFFFFF">
+  <center>
+  <h1>
+	<font size=+3> Multimodal Spatial Role Labeling </font></h1>
+ <h3><font size=+2><a href="http://clef2017.clef-initiative.eu/">CLEF-2017 Lab</a>, Dublin, 11-14 September 2017</font></h3></center>
+
+    <center><h3></h3></center>
+
+<p style="margin-left: 70px; margin-right: 70px; text-align: justify;">
+<font size=+1>
+ The main goal of multi-modal SpRL is to explore the extraction of spatial information from two information resources that is image and text. This is important for various applications such as semantic search, question answering, geographical information systems and even in robotics for machine understanding of navigational instructions or instructions for grabbing and manipulating objects. It is also essential for some specific tasks such as text to scene conversion or vice-versa, scene understanding as well as general information retrieval tasks when using huge amount of available multimodal data from various resources. Moreover, there is an increasing interest in extraction of spatial information from medical images that are accompanied by natural language descriptions.   
+</font>
+ </p>
+ 
+
+<hr>
+
+<div id="sidebar">
+    <p>
+    <a href="CLEF_lab.htm#news">News</a>
+    </p>
+    <p>
+    <a href="CLEF_lab.htm#tasks">Tasks</a>
+    </p>
+    <p>
+    <a href="CLEF_lab.htm#evaluation">Evaluation</a>
+    </p>
+    <p>
+    <a href="CLEF_lab.htm#data">Data</a>
+    </p>
+    <p>
+    <a href="CLEF_lab.htm#organizers">Organizers</a>
+    </p>
+
+    <p>
+    <a href="CLEF_lab.htm#references">References</a>
+    </p>
+</div>
+
+<div id="body_outer">
+<div id="body">
+<div id="header">
+
+<h2 id="news">News</h4>
+<ul>
+<li> <p style="margin-left: 5px; margin-right: 30px; text-align: justify;">
+ <strong> 09/07/2017.</strong> The lab proposal accepted. 
+ </p>
+ </li>
+</ul>
+<h2 id="tasks">Tasks</h4>
+
+The task of spatial role labeling (SpRL)[1] formalizes the spatial concepts and relations in the language to be mapped to qualitative spatial representation using machine learning. 
+<ul>
+<li>
+The first level of this task is to extract spatial roles called a) spatial indicators, b) trajectors and c) landmarks. Spatial indicators indicate the existence of spatial information in a sentence. Trajector is an entity whose location is described and landmark is a reference object for describing the location of a trajector. 
+
+For example, in Figure[1], a picture has been described in the caption using a few English sentences. In the first sentence the location of <strong>kids </strong>that is the {trajector} has been described with respect to the {stairs} that is the {landmark} using the preposition {on} that is the {spatial indicator}.  These are examples of some spatial roles that we aim to extract form the sentence.  
+</li>
+<li>
+The second level of this task is to extract spatial relationships. In the same example we have the triplet (kids,on,stairs) that form a kind of spatial relation/link between the three above mentioned roles. Recognizing the spatial relations is very challenging because there could be several spatial roles in the sentence and the model should be able to recognize the right connections. For example (waiting, on, stairs) is a wrong relation here because "kids" is the trajector in this sentence not "waiting". 
+</li>
+<li>
+The third level of the task is to recognize the type of spatial relations. The type of relations is expressed in terms of topological models, according to the well-known RCC (regional connection calculus) qualitative representation, in addition to 6 directional relations. RCC5 includes (Externally connected, Disconnected, Overlapping, Proper part, and Equality). Directional includes relative directions such as left, right, above, below, behind, front. In the above example we can state the type of relation between the roles in the triplet,(kids,on,stairs), is "above". 
+</li>
+</ul>  
+<figure>
+    <img src='CLEFImage.pdf' alt='Example picture' width= '450px' height= 'auto' />
+    <figcaption>Fig 1. About 20 kids in traditional clothing and hats waiting on stairs. A house and a green wall with gate in the background. A sign saying that plants can't be picked up on the right.</figcaption>
+</figure>
+
+The data has been annotated with the above mentioned roles and relations and the annotated data can be used to train machine leaning models to do this kind of extractions automatically. Since doing this task has been appeared to be very challenging due to the ambiguity and polysemy in the text[ACMpaper], we have decided to exploit the images that come along with CLEF textual data to improve the recognition of the spatial objects and their relations. Specifically, we believe the images will certainly help to improve the recognition of the type of relations given that the geometrical features of the boundaries of the objects in the images are closer to the formal qualitative representations of the relationships compared to the counterpart linguistic descriptions.
+
+
+
+
+<h2 id="data">Data</h4>
+
+The dataset we prepared for this task has been based on CLEF, IAPRTC-12 Image Benchmark. The original data includes touristic pictures along with textual description of the pictures. We have annotated the texts of a subset of images according to spatial role labeling annotation scheme[1]. 
+<ul>
+<li>
+Training data
+</li>
+<li>
+Test data
+</li>
+</ul>
+<h2 id="evaluation">Evaluation</h4>
+We split the human annotated data into a training set and a testing set. The extractions of the model are compared to human annotations. The evaluation metrics are precision, recall and F1 measures. These metrics are used to evaluate the performance on recognizing each type of role and each type of relation separately. 
+
+<h2 id="baselines">Baselines</h4>
+ The baseline models have been implemented in <a href="https://github.com/IllinoisCogComp/saul/blob/master/saul-core/README.md"><strong>Saul</strong></a> which has been equipped by various NLP tools for extraction of linguistic features.  This is a very flexible platform to facilitate programming and designing various models for the interested participants and it is publicly available. The <a href="https://github.com/IllinoisCogComp/saul/blob/master/saul-examples/src/main/scala/edu/illinois/cs/cogcomp/saulexamples/nlp/SpatialRoleLabeling/README.md"><strong>SpRL models </strong></a> and various number of features have been implemented based on the previous related works.  
+
+<h2 id="labSetting">Lab setting</h4>
+The workshop has two types of submissions, research papers and shared task  participant papers. 
+
+
+<h2 id="organizers">Organizers</h4>
+<ul>
+<li>Parisa Kordjamshidi, Tulane University, pkordjam@tulane.edu</li>
+<li>Taher Rahgooy, Bu-Ali Sina University, taher.rahgooy@gmail.com</li>
+<li>Marie-Francine Moens, KULeuven, sien.moens@cs.kuleuven.be</li>
+<li>James Pustejovsky Brandeis University, Waltham, MA.  jamesp@cs.brandeis.edu. 
+<li>Oswaldo Ludwig, oswaldoludwig@gmail.com</li>
+<li>Kirk Roberts, University of Texas Health Science Center at Houston, kirk.roberts@uth.tmc.edu</li>
+</ul> 
+<br>
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=11083511; 
+var sc_invisible=1; 
+var sc_security="2f97c6cf"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="web analytics"
+href="http://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="//c.statcounter.com/11083511/0/2f97c6cf/1/" alt="web
+analytics"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+
+  </body>
+</html>
