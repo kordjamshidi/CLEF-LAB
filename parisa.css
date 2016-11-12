@@ -37,6 +37,12 @@ div#sidebar {
     float: left;
     text-align: right;
    }
+div#sidebarRight {
+    position: fixed;
+    width: 10em;
+    float: right;
+    text-align: right;
+   }
 div#body_outer {
     margin-left: 12em;
     max-width: 45em;
