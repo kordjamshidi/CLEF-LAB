@@ -20,15 +20,18 @@
 	<font size=+3> Multimodal Spatial Role Labeling </font>
   </h1>
  <h3><font size=+2><a href="http://clef2017.clef-initiative.eu/">CLEF-2017 Lab</a>, Dublin, 11-14 September 2017</font></h3></center>
-<img style="margin-left:60px" src="images/clefDublin2017.png" align="left">
-<img style="width: 300px; height: auto; margin-right:180px" alt="CLEF initiative" src="images/clef-initiative-logo-full.png" align="right"/>
+ <img style="width: 140px; height: auto; margin-left:70px;margin-top: 40px;" src="images/logo.jpg" align="left">
+<img style="margin-right:180px; margin-top: 40px;" src="images/clefDublin2017.png" align="right">
 
-<p style="margin-left: 50px; margin-right: 200px; margin-top: 60px; text-align: justify;">
+
+<p style="margin-left: 60px; margin-right: 250px; margin-top: 50px; text-align: justify;">
 <font size=+1>
- The main goal of multi-modal SpRL is to explore the extraction of spatial information from two information resources that is image and text. 
+ The main goal of multi-modal SpRL is to explore the extraction of spatial information from two information resources that are image and text. 
  This is important for various applications such as semantic search, 
   question answering, geographical information systems and even in robotics for machine understanding of navigational instructions or instructions for grabbing and manipulating objects.
- It is also essential for some specific tasks such as text to scene conversion or vice-versa, scene understanding as well as general information retrieval tasks when using huge amount of available multimodal data from various resources. Moreover, there is an increasing interest in extraction of spatial information from medical images that are accompanied by natural language descriptions. 
+ It is also essential for some specific tasks such as text to scene conversion or vice-versa, scene understanding as well as general information retrieval tasks when using a huge amount of available multimodal data from various resources. Moreover, there is an increasing interest in the extraction of spatial information from medical images that are accompanied by natural language descriptions. 
+ <strong>In this workshop we accept papers related to this research topic, moreover, we provide a pilot task and data for the interested participants to build a system for such extractions. 
+</strong>
 </font>
 
  </p>
@@ -70,14 +73,25 @@
 <h2 id="news">News</h2>
 <ul>
 <li> <p style="margin-left: 5px; margin-right: 30px; text-align: justify;">
- <strong> 09/07/2017.</strong> The lab proposal accepted. <br>
+ <strong> 09/07/2016.</strong> The lab proposal accepted. </p></li>
+ <li> <strong> 11/10/2016. </strong> The Registration is open, <a href="http://clef2017-labs-registration.dei.unipd.it/registrationForm.php">click here to register</a>. <br>
      <a class="twitter-timeline" data-width="750" data-height="150" href="https://twitter.com/mSpRL2017">Tweets by mSpRL2017</a>
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     </p>
   
  </li>
 </ul>
-<h2 id="tasks">Task Description</h2>
+<h2 id="labSetting">Lab setting</h2>
+The workshop has two types of submissions, research papers and shared task  participant papers. The main topics for the general research papers include the following topics and the related areas :
+<ul>
+<li> Extraction of spatial information form text.
+<li> Extraction of spatial information form images.
+<li> Combining various modalities for information extraction.
+<li> Combining modalities to expand the feature space for machine learning models.
+<li> Combining modalities to help resolving inconsistencies and ambiguity in the extractions.
+<li> Spatial representations appropriate for information extraction from image and text.
+</ul>
+<h2 id="tasks">Pilot Task Description</h2>
 
 <strong>Multi-modal spatial role labeling </strong>is an extension of the <strong>spatial role labeling </strong>task to exploit multi-modal data including image and text for extraction of spatial information. The task of <a href="http://www.cs.tulane.edu/~pkordjam/SpRL.htm">spatial role labeling (SpRL)</a>[1] formalizes the representation of spatial concepts and relations in the natural language text to be mapped to qualitative spatial representation models by means of machine learning techniques. Let us illustrate the spatial role labeling task with the following example: 
 
@@ -146,16 +160,7 @@ We split the human annotated data into a training set and a testing set. The ext
 <h2 id="baselines">Baselines</h2>
  The baseline models have been implemented in <a href="https://github.com/IllinoisCogComp/saul/blob/master/saul-core/README.md"><strong>Saul</strong></a> which has been equipped by various NLP tools for extraction of linguistic features.  This is a very flexible platform to facilitate programming and designing various models for the interested participants and it is publicly available. The <a href="https://github.com/IllinoisCogComp/saul/blob/master/saul-examples/src/main/scala/edu/illinois/cs/cogcomp/saulexamples/nlp/SpatialRoleLabeling/README.md"><strong>SpRL models </strong></a> and various number of features have been implemented based on the previous related works.  
 
-<h2 id="labSetting">Lab setting</h2>
-The workshop has two types of submissions, research papers and shared task  participant papers. The main topics for the general research papers include the following topics and the related areas :
-<ul>
-<li> Extraction of spatial information form text.
-<li> Extraction of spatial information form images.
-<li> Combining various modalities for information extraction.
-<li> Combining modalities to expand the feature space for machine learning models.
-<li> Combining modalities to help resolving inconsistencies and ambiguity in the extractions.
-<li> Spatial representations appropriate for information extraction from image and text.
-</ul>
+
 <h2 id="dates">Important dates</h2>
 <ul>
 <li>Labs registration opens: 4 November 2016
@@ -186,6 +191,8 @@ The workshop has two types of submissions, research papers and shared task  part
 <li><strong>Oswaldo Ludwig</strong>, oswaldoludwig@gmail.com</li>
 <li><p style="margin-left: 0px; text-align: justify;"><strong>Kirk Roberts</strong>, UT Health Science Center at Houston, kirk.roberts@uth.tmc.edu</p></li>
 </ul>
+<a href="mailto:sprl_lab_clef2017@googlegroups.com?Subject=mSpRL%20CLEF-2017" target="_top">Send Mail</a>
+</p>
 
 <h2 id="references">References</h2>
 
@@ -199,8 +206,13 @@ The workshop has two types of submissions, research papers and shared task  part
 P., van Otterlo, M., Moens, M. (2015). Spatial role labeling annotation scheme. In: Pustejovsky J., Ide N. (Eds.),
 Handbook of Linguistic Annotation Springer Verlag. <a href="papers/SpatialRoleLabeling_MinorReview">Download</a></p>
 
+<p style="margin-left: 0px; text-align: justify;">[5]. James Pustejovsky, Jessica Moszkowicz, and Marc Verhagen. A linguistically grounded annotation language for spatial information. TAL, 53(2), 2012. 6
+</p>
+<p style="margin-left: 0px; text-align: justify;">[6]. James Pustejovsky and Zachary Yocum. Capturing motion in iso-spacebank. In Workshop on Interoperable Semantic Annotation, page 25, 2013.
+</p>
 <br>
-<img style="width: 250px; height: auto; margin-right:180px; margin-bottom:50px" alt="Cost" src="images/logo_cost.png" align="left"/>
+<img style="width: 250px; height: auto; margin-bottom:50px" alt="Cost" src="images/logo_cost.png" align="right"/>
+<img style="width: 250px; height: auto; margin-bottom:50px" alt="CLEF initiative" src="images/clef-initiative-logo-full.png" align="left"/>
 
 <!-- Start of StatCounter Code for Default Guide -->
 <script type="text/javascript">
